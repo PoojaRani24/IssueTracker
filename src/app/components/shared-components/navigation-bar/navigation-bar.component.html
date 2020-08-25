@@ -1,0 +1,83 @@
+<div class="s-layout">
+    <!-- Sidebar -->
+    <div class="s-layout__sidebar">
+      <a class="s-sidebar__trigger" href="#0">
+        <mat-icon > menu </mat-icon>
+        <!-- <em style="color: white;">Menu</em> -->
+    </a>
+    
+      <nav class="s-sidebar__nav">
+         <ul>
+            <li>
+               <a class="s-sidebar__nav-link" href="#0">
+                <mat-icon>signal_cellular_alt</mat-icon><em>Dashboard</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="#0">
+                <mat-icon>library_books</mat-icon><em>Issues</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="#0">
+                <mat-icon>create</mat-icon><em>Create</em>
+               </a>
+            </li>
+         </ul>
+      </nav>
+    </div>
+    
+    <!-- Content -->
+    <main class="s-layout__content" >
+        <div class="navbar row sticky" >
+            <!-- <mat-icon style="color: #5763FE;">crop_rotate</mat-icon> -->
+            <div class="left">
+              <a href="#" style="color:#41454A; " class="brand">tracker</a>
+              <input type="text" placeholder="search...">
+            </div>
+            <div class="right" >
+                <mat-icon style="color: #5763FE;">notification_important</mat-icon>
+                <mat-icon style="color: #5763FE;">portrait</mat-icon>
+            </div>
+        </div>
+
+      <div class="row issue heading" >
+        <div class="heading part1">
+            <h1>Issues</h1>
+        </div>
+        <div class="heading part1">
+            <div>
+                Filter Project <mat-icon style="color: black;">keyboard_arrow_down</mat-icon>
+            </div>
+            <div>
+                <mat-icon style="color: black;"> border_inner</mat-icon>
+                <mat-icon style="color: black;">receipt</mat-icon>
+            </div>
+        </div>
+       </div>
+
+
+      <div class="row main-part-1">
+        <div class="col-4 todo" >
+            <h1 >To Do 5</h1>
+            <app-card></app-card>
+            <app-card></app-card>
+            <app-card></app-card>
+            <app-card></app-card>
+            <app-card></app-card>
+        </div>
+        <div class="col-3 progress">
+            <h1 >In Progress 2</h1>
+            <app-inprogress-card></app-inprogress-card>
+            <app-inprogress-card></app-inprogress-card>
+        </div>
+        <div class="col-4 done">
+            <h1 >Done 4</h1>
+            <app-done-card></app-done-card>
+            <app-done-card></app-done-card>
+            <app-done-card></app-done-card>
+            <app-done-card></app-done-card>
+        </div>
+      </div>
+    </main>
+</div>
