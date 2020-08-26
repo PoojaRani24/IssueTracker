@@ -11,7 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './components/shared-components/card/card.component';
 import { InprogressCardComponent } from './components/shared-components/inprogress-card/inprogress-card.component';
 import { DoneCardComponent } from './components/shared-components/done-card/done-card.component';
-
+import { MatSelectModule } from '@angular/material/select';
+import { DropdownComponent } from './components/shared-components/dropdown/dropdown.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { DoneCardComponent } from './components/shared-components/done-card/done
     NavigationBarComponent,
     CardComponent,
     InprogressCardComponent,
-    DoneCardComponent
+    DoneCardComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,10 @@ import { DoneCardComponent } from './components/shared-components/done-card/done
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // FormControl
   ],
   providers: [],
   bootstrap: [AppComponent]

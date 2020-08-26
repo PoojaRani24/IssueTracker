@@ -32,26 +32,29 @@
         <div class="navbar row sticky" >
             <!-- <mat-icon style="color: #5763FE;">crop_rotate</mat-icon> -->
             <div class="left">
-              <a href="#" style="color:#41454A; " class="brand">tracker</a>
+              <a href="#" style="color:#41454A; " class="brand"><b>tracker</b></a>
               <input type="text" placeholder="search...">
             </div>
             <div class="right" >
-                <mat-icon style="color: #5763FE;">notification_important</mat-icon>
-                <mat-icon style="color: #5763FE;">portrait</mat-icon>
+              <a class="notif" href="#"><mat-icon style="color: #AAACAE;">notification_important</mat-icon></a>
+              <a href="#"><img src="assets/dog.jpeg"  class="avatar"></a>
             </div>
         </div>
 
       <div class="row issue heading" >
         <div class="heading part1">
-            <h1>Issues</h1>
+          <a href="#"><h1>Issues</h1></a>
         </div>
-        <div class="heading part1">
+        <div class="heading part2">
             <div>
-                Filter Project <mat-icon style="color: black;">keyboard_arrow_down</mat-icon>
+
+              <app-dropdown></app-dropdown>
+
+                <!-- <mat-icon style="color: black;">keyboard_arrow_down</mat-icon> -->
             </div>
             <div>
-                <mat-icon style="color: black;"> border_inner</mat-icon>
-                <mat-icon style="color: black;">receipt</mat-icon>
+                <a href="#"><mat-icon style="color:#4F60FE;"> border_inner</mat-icon></a>
+                <a href="#"><mat-icon style="color: #C6CEEB;">receipt</mat-icon></a>
             </div>
         </div>
        </div>

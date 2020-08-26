@@ -2,6 +2,10 @@
 // @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+$bg: #0BAAD4;
+$text: rgba(255,255,255,.7);
+$hover: darken($bg, 10%);
+
 * {
     box-sizing: border-box;
     margin:0%;
@@ -76,3 +80,12 @@ button {
     opacity: 1;
     right: 0;
   }
+
+  a:hover{
+    transform: translate(-3px,-3px);
+  }
+
+  // input:hover{
+  //   transform: translate(-3px,-3px);
+  // }
+  
