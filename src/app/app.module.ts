@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationBarComponent } from './components/shared-components/navigation-bar/navigation-bar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -17,7 +16,6 @@ import { IssueListScreenComponent } from './components/issue-list-screen/issue-l
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationBarComponent,
     CardComponent,
     DropdownComponent,
     IssueListScreenComponent

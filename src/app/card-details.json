@@ -5,27 +5,7 @@
         "title":"Lorem ipsum dolor",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis sapien, tincidunt sed leo at, pretium fermentum",
         "name": "Sijo M Peter",
-        "designation": "UI/UX Developer",
-        "status": "High Priority",
-        "count":[1,2,3,4,5]
-    },
-    {
-        "id": "PCG067834",
-        "date": "January 17,2016",
-        "title":"Lorem ipsum dolor",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis sapien, tincidunt sed leo at, pretium fermentum",
-        "name": "Sijo M Peter",
-        "designation": "UI/UX Developer",
-        "status": "In-Progress"
-    },
-    {
-        "id": "PCG067834",
-        "date": "January 17,2016",
-        "title":"Lorem ipsum dolor",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis sapien, tincidunt sed leo at, pretium fermentum",
-        "name": "Sijo M Peter",
-        "designation": "UI/UX Developer",
-        "status": "Done"
+        "designation": "UI/UX Developer"
     }
 ]
 
