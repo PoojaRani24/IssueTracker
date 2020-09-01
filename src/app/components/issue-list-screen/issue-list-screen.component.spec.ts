@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DoneCardComponent } from './done-card.component';
+import { IssueListScreenComponent } from './issue-list-screen.component';
 
-describe('DoneCardComponent', () => {
-  let component: DoneCardComponent;
-  let fixture: ComponentFixture<DoneCardComponent>;
+describe('IssueListScreenComponent', () => {
+  let component: IssueListScreenComponent;
+  let fixture: ComponentFixture<IssueListScreenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DoneCardComponent ]
+      declarations: [ IssueListScreenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DoneCardComponent);
+    fixture = TestBed.createComponent(IssueListScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

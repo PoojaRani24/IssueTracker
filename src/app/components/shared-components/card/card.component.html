@@ -1,14 +1,14 @@
 <mat-card class="example-card">
                 
     <div class="row card">
-        <div><b>ID: PCG067834</b></div>
-        <div>January 17,2016</div>
+        <div><b>{{products[0].id}}</b></div>
+        <div>{{products[0].date}}</div>
     </div>
-    <div class="row" ><h1><b>Lorem ipsum dolor</b></h1></div>
+    <div class="row" ><h1><b>{{products[0].title}}</b></h1></div>
     
     <mat-card-content>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis sapien, tincidunt sed leo at, pretium fermentum
+        {{products[0].description}}
       </p>
     </mat-card-content>
     <mat-card-actions>
@@ -20,11 +20,20 @@
           <div class="picture">
             <a><img src="assets/dog.jpeg"  class="avatar"></a>
             <div>
-            <div class= "name" ><b>Sijo M Peter</b></div>
-            <div class="designation">UI/UX Developer</div>
+            <div class= "name" ><b>{{products[0].name}}</b></div>
+            <div class="designation">{{products[0].designation}}</div>
           </div>
           </div>
-            <button mat-raised-button color="warn">High Priority</button>
-        </div>
+
+          <div *ngIf="status===HighPriority">
+            <button mat-raised-button color="warn">{{status}}</button>
+          </div>
+          <div *ngIf="status===Progress">
+            <button mat-raised-button color="primary">{{status}}</button>
+          </div>
+          <div *ngIf="status===Done">
+            <button mat-raised-button color="accent">{{status}}</button>
+          </div>
+          </div>
     </mat-card-actions>
   </mat-card>

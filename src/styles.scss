@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "~bootstrap/dist/css/bootstrap.css";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-$bg: #0BAAD4;
-$text: rgba(255,255,255,.7);
-$hover: darken($bg, 10%);
+@font-face {
+  font-family: myFirstFont;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+}
 
 * {
     box-sizing: border-box;
@@ -44,7 +45,7 @@ $hover: darken($bg, 10%);
   }
 
 html, body { height: 100%; background-color: #F4F4F5;}
-body { margin: 0; font-family: 'Open Sans', sans-serif; }
+body { margin: 0; font-family: myFirstFont; }
 
 button {
     border-radius: 4px;
@@ -85,7 +86,4 @@ button {
     transform: translate(-3px,-3px);
   }
 
-  // input:hover{
-  //   transform: translate(-3px,-3px);
-  // }
   

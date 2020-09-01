@@ -2,7 +2,7 @@
     <!-- Sidebar -->
     <div class="s-layout__sidebar">
       <a  class="s-sidebar__trigger" href="#0">
-        <mat-icon style="color:#4F60FE;" > menu </mat-icon>
+        <mat-icon > menu </mat-icon>
         <!-- <em style="color: white;">Menu</em> -->
     </a>
     
@@ -32,14 +32,16 @@
         <div class="navbar row sticky" >
             <!-- <mat-icon style="color: #5763FE;">crop_rotate</mat-icon> -->
             <div class="left">
-              <a href="#" style="color:#41454A; " class="brand"><b>tracker</b></a>
+              <a href="#"  class="brand"><b>tracker</b></a>
               <input type="text" placeholder="search...">
             </div>
             <div class="right" >
-              <a class="notif" href="#"><mat-icon style="color: #AAACAE;">notification_important</mat-icon></a>
+              <a class="notif" href="#"><mat-icon >notification_important</mat-icon></a>
               <a href="#"><img src="assets/dog.jpeg"  class="avatar"></a>
             </div>
         </div>
+
+        
 
       <div class="row issue heading" >
         <div class="heading part1">
@@ -53,8 +55,8 @@
                 <!-- <mat-icon style="color: black;">keyboard_arrow_down</mat-icon> -->
             </div>
             <div>
-                <a href="#"><mat-icon style="color:#4F60FE;"> border_inner</mat-icon></a>
-                <a href="#"><mat-icon style="color: #C6CEEB;">receipt</mat-icon></a>
+                <a class="border-inner" href="#"><mat-icon > border_inner</mat-icon></a>
+                <a class="receipt" href="#"><mat-icon >receipt</mat-icon></a>
             </div>
         </div>
        </div>
@@ -62,25 +64,25 @@
 
       <div class="row main-part-1">
         <div class="col-4 todo" >
-            <h1 >To Do 5</h1>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
+            <h1 >To Do {{todo}}</h1>
+            <div *ngFor="let i of [1,2,3,4,5]">
+            <app-card [status]="Todo"></app-card>
+          </div>
         </div>
         <div class="col-3 progress">
-            <h1 >In Progress 2</h1>
-            <app-inprogress-card></app-inprogress-card>
-            <app-inprogress-card></app-inprogress-card>
+            <h1 >In Progress {{progress}}</h1>
+            <div *ngFor="let i of [1,2]">
+              <app-card [status]="Progress"></app-card>
+            </div>
         </div>
         <div class="col-4 done">
-            <h1 >Done 4</h1>
-            <app-done-card></app-done-card>
-            <app-done-card></app-done-card>
-            <app-done-card></app-done-card>
-            <app-done-card></app-done-card>
+            <h1 >Done {{done}}</h1>
+            <div *ngFor="let i of [1,2,3,4]">
+              <app-card [status]="Done"></app-card>
+            </div>
         </div>
       </div>
+
+
     </main>
 </div>

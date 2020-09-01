@@ -148,7 +148,7 @@
  
  mat-icon{
      color: white;
-     padding:10px;
+     padding:0.8rem;
  }
 
  @media (min-width: 68em) {
@@ -192,7 +192,6 @@
       .right{
            width:3em;
          justify-content: space-evenly;
-        //   align-content: flex-end;
           margin-right:70px;
       }
   
@@ -202,10 +201,6 @@
     justify-content:space-evenly;
     margin:20px;
     height:100vh;
-    // opacity:.85;
-    // z-index: -10;
-    // border-radius:2%;
-    // background-color: #EBEDF4;
 }  
 
 .todo,.progress, .done{
@@ -231,17 +226,6 @@ h1{
     justify-content:space-between;
     // padding:5px;
 }
-
-// .card{
-//     // border:1px solid red;
-//     display:flex;
-//     justify-content: space-between;
-//     margin-bottom:5px;
-// }
-
-// app-card{
-//     margin-bottom:5%;
-// }
 
 input[type=text] {
     width: auto;
@@ -278,6 +262,19 @@ input[type=text] {
    border-radius: 50%;
  }
 
- .notif{
+ .notif mat-icon{
     margin-right:15px;
+    color: #AAACAE;
  }
+
+ .border-inner mat-icon{
+  color:#4F60FE;
+ }
+
+ .receipt mat-icon{
+  color: #C6CEEB;
+  }
+
+  .s-sidebar__trigger mat-icon{
+  color:#4F60FE;
+  }
