@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "./assets/utilities/variable";
 @font-face {
 	font-family: 'OpenSansRegular';
 	src: url('./assets/fonts/OpenSansRegular.eot');
@@ -47,7 +47,7 @@
       flex-wrap:wrap;
   }
 
-html, body { height: 100%; background-color: #F4F4F5;}
+html, body { height: 100%; background-color: $bg;}
 body { margin: 0; font-family:OpenSansRegular ; }
 
 button {
