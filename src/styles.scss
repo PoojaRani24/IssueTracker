@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-// @import "~bootstrap/dist/css/bootstrap.css";
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @font-face {
-  font-family: myFirstFont;
-  src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+	font-family: 'OpenSansRegular';
+	src: url('./assets/fonts/OpenSansRegular.eot');
+	src: local('OpenSansRegular'), url('./assets/fonts/OpenSansRegular.woff') format('woff'), url('./assets/fonts/OpenSansRegular.ttf') format('truetype');
 }
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_38327">Text with this font applied</p> */
+.font {
+	font-family: 'OpenSansRegular' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
 
 * {
     box-sizing: border-box;
@@ -15,8 +20,6 @@
 
   [class*="col-"] {
     float: left;
-    // padding: 15px;
-    // border: 1px solid red;
   }
 
 .col-1 {width: 8.33%;}
@@ -45,13 +48,11 @@
   }
 
 html, body { height: 100%; background-color: #F4F4F5;}
-body { margin: 0; font-family: myFirstFont; }
+body { margin: 0; font-family:OpenSansRegular ; }
 
 button {
     border-radius: 4px;
-    background-color: #f4511e;
     border: none;
-    color: black;
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
@@ -86,4 +87,4 @@ button {
     transform: translate(-3px,-3px);
   }
 
-  
+ 

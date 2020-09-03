@@ -1,5 +1,6 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import * as data from '../../../card-details.json';
+import '../../../../assets/utilities/_variable.scss';
 
 @Component({
   selector: 'app-card',

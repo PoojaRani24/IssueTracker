@@ -1,17 +1,16 @@
+@import '../../../../assets/utilities/_variable.scss';
+
+
 .card{
-    // border:1px solid red;
     display:flex;
     justify-content: space-between;
     margin-bottom:5px;
-    // padding:5px;
 }
 
 .example-card{
     margin-bottom:15px;
-    //   z-index: 1; 
     opacity:.8;
-    box-shadow: 5px 10px 8px #888888;
-   
+    box-shadow: 5px 10px 8px $card-shadow;
 }
 
  .example-card:hover{
@@ -39,3 +38,7 @@
     margin-left:15px;
     font-size:10px;
   }
+
+  
+
+  

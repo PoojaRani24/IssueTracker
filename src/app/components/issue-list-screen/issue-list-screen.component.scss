@@ -1,3 +1,5 @@
+@import '../../../assets/utilities/_variable.scss';
+
 /* Primary Styles */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -6,13 +8,7 @@
  body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    color: #333;
-    background-color: #F4F4F5;
  }
- 
-//  h1 {
-//    font-size: 1.4em;
-//  }
  
  em {
     font-style: normal;
@@ -33,8 +29,6 @@
  .s-layout__content {
     display: flex;
     flex-direction:column;
-    // justify-content: center;
-    // align-items: center;
     flex: 1;
  }
  
@@ -45,14 +39,11 @@
     top: 0;
     left: 0;
     width: 10%;
-    height: 4em;
-    background: white;
+    height: 3.6em;
+    background-color:$white;
  }
  
  .s-sidebar__trigger > em {
-    // display: inline-block;
-    // margin: 1.5em 0 0 1.5em;
-    // color: #f07ab0;
     font-size:17px;
  }
  
@@ -64,8 +55,8 @@
     transition: all .3s ease-in;
     width: 15em;
     height: 100%;
-    background:#1C2137;
-    color: rgba(255, 255, 255, 0.7);
+    background-color:$sidebar-bg;
+    color:$sidebar-white-icons;
  }
  
  .s-sidebar__nav:hover,
@@ -103,7 +94,7 @@
  }
  
  .s-sidebar__nav-link:hover {
-    background:#4F60FE;
+    background:$sidebar-icon-hover;
  }
  
  .s-sidebar__nav-link > i {
@@ -147,7 +138,7 @@
  }
  
  mat-icon{
-     color: white;
+     color: $white;
      padding:0.8rem;
  }
 
@@ -173,15 +164,14 @@
  /* Horizontal NavBar*/
 
  .navbar {
-    background:white;
+    background:$white;
     display: flex;
      justify-content: space-between;
     .brand {
       width: 7em;
       text-align: center;
       padding: 1em;
-      background:#FFFFFF;
-      color: #292E33;
+      color:$brand-text-colour;
     }
   }
   
@@ -204,11 +194,10 @@
 }  
 
 .todo,.progress, .done{
-    background-color: #EBEDF4;
+    background-color: $issue-status-bg;
 }
 
 h1{ 
-//    text-align:center;
    padding-top:15px;
    padding-left:30px;
 }
@@ -217,30 +206,23 @@ h1{
     display:flex;
     justify-content:space-between;
     padding:3px;
-    // position: relative;
 }
  
 .filter{
-    // border:1px solid orange;
     display:flex;
     justify-content:space-between;
-    // padding:5px;
 }
 
 input[type=text] {
     width: auto;
     padding: 10px 15px;
-    // margin: 8px 0;
     display: inline-block;
-    // border: 1px solid #ccc;
-    // border-radius: 4px;
     box-sizing: border-box;
     text-decoration: none;
-    border:white;
+    border:$white;
   }
 
   .issue{
-    //   border: 1px solid red;
       padding-top:60px;
   }
 
@@ -264,17 +246,17 @@ input[type=text] {
 
  .notif mat-icon{
     margin-right:15px;
-    color: #AAACAE;
+    color:$notif-icon;
  }
 
  .border-inner mat-icon{
-  color:#4F60FE;
+  color:$borderInner-icon;
  }
 
  .receipt mat-icon{
-  color: #C6CEEB;
+  color:$receipt-icon;
   }
 
   .s-sidebar__trigger mat-icon{
-  color:#4F60FE;
+  color:$hamburger-icon;
   }
