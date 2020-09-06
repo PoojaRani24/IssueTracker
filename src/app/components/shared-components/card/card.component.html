@@ -1,38 +1,38 @@
 <mat-card class="example-card font">
                 
     <div class="row card">
-        <div><b>{{products[0].id}}</b></div>
-        <div>{{products[0].date}}</div>
+        <div><b>{{ issue.id | translate}}</b></div>
+        <div>{{ 'date' | translate}}</div>
     </div>
-    <div class="row" ><h1><b>{{products[0].title}}</b></h1></div>
+    <div class="row" ><h1><b>{{ 'title' | translate }}</b></h1></div>
     
     <mat-card-content>
       <p>
-        {{products[0].description}}
+        {{ 'description' | translate}}
       </p>
     </mat-card-content>
     <mat-card-actions>
         <div class="row card">
-            <div>Assignee</div>
-            <div>Status</div>
+            <div>{{ 'assignee' | translate }}</div>
+            <div>{{ 'status' | translate }}</div>
         </div>
         <div class="row card">
           <div class="picture">
             <a><img src="assets/dog.jpeg"  class="avatar"></a>
             <div>
-            <div class= "name" ><b>{{products[0].name}}</b></div>
-            <div class="designation">{{products[0].designation}}</div>
+            <div class= "name" ><b>{{ issue.name | translate}}</b></div>
+            <div class="designation">{{ 'designation' | translate}}</div>
           </div>
           </div>
 
-          <div *ngIf="status===HighPriority">
-            <button mat-raised-button color="warn">{{status}}</button>
+          <div *ngIf="issue.status===HighPriority">
+            <button class="mat-btn" mat-raised-button color="warn">{{ 'high-priority' | translate}}</button>
           </div>
-          <div *ngIf="status===Progress">
-            <button mat-raised-button color="primary">{{status}}</button>
+          <div *ngIf="issue.status===Progress">
+            <button class="mat-btn" mat-raised-button color="primary">{{ 'in-progress' | translate}}</button>
           </div>
-          <div *ngIf="status===Done">
-            <button mat-raised-button color="accent">{{status}}</button>
+          <div *ngIf="issue.status===Done">
+            <button class="mat-btn" mat-raised-button color="accent">{{ 'done' | translate}}</button>
           </div>
           </div>
     </mat-card-actions>

@@ -12,6 +12,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { DropdownComponent } from './components/shared-components/dropdown/dropdown.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { IssueListScreenComponent } from './components/issue-list-screen/issue-list-screen.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +36,24 @@ import { IssueListScreenComponent } from './components/issue-list-screen/issue-l
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    // FormControl
+    MatSlideToggleModule,
+
+    // ngx-translate and the loader module
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

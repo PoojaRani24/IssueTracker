@@ -177,13 +177,13 @@
   
 .left,.right{
     display: flex;
-    }
+ }
 
-      .right{
-           width:3em;
-         justify-content: space-evenly;
-          margin-right:70px;
-      }
+.right{
+      width:3em;
+      justify-content: space-evenly;
+      margin-right:70px;
+}
   
   
 .main-part-1{
@@ -197,7 +197,7 @@
     background-color: $issue-status-bg;
 }
 
-h1{ 
+.title{ 
    padding-top:15px;
    padding-left:30px;
 }
@@ -259,4 +259,14 @@ input[type=text] {
 
   .s-sidebar__trigger mat-icon{
   color:$hamburger-icon;
+  }
+
+  .toggle{
+   padding-top:1rem;
+   margin-right:1rem;
+  }
+
+  .en{
+   width:6rem;
+   height:2rem;
   }

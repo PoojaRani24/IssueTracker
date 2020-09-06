@@ -1,6 +1,6 @@
-import { Component, OnInit ,Input} from '@angular/core';
-import * as data from '../../../card-details.json';
+import { Component, OnInit , Input } from '@angular/core';
 import '../../../../assets/utilities/_variable.scss';
+import { Issue } from '../../../issue';
 
 @Component({
   selector: 'app-card',
@@ -10,15 +10,12 @@ import '../../../../assets/utilities/_variable.scss';
 export class CardComponent implements OnInit {
 
   constructor() { }
- @Input() status:string;
- HighPriority="High Priority";
- Progress="In-Progress";
- Done="Done";
-  products: any = (data as any).default;
+ @Input() issue: Issue;
 
-  ngOnInit(): void {
-    console.log(this.status);
-    console.log(this.status==="High Priority")
-  }
+ HighPriority = 'High Priority';
+ Progress = 'In-Progress';
+ Done = 'Done';
+
+  ngOnInit(): void {}
 
 }

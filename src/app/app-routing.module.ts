@@ -5,7 +5,7 @@ import { IssueListScreenComponent } from './components/issue-list-screen/issue-l
 const routes: Routes = [
   { path: 'issuelist', component: IssueListScreenComponent},
   { path: '', component: IssueListScreenComponent},
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

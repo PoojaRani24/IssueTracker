@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from './card-details.json';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,7 @@ import * as data from './card-details.json';
 export class AppComponent {
   title = 'tracker';
 
-  products: any = (data as any).default;
-
-  constructor(){}
-  ngOnInit(){
-  }
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    }
 }
