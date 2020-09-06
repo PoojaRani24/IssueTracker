@@ -1,0 +1,18 @@
+{
+    "dashboard": "Dashboard",
+    "issues":"Issues",
+    "create":"Create",
+    "tracker":"tracker",
+    "search":"search...",
+    "todo":"To Do",
+    "in-progress":"In Progress",
+    "done":"Done",
+    "filter":"Filter",
+    "assignee":"Assignee",
+    "status":"Status",
+    "high-priority":"High Priority",
+    "date":"January 17,2016",
+    "title":"Lorem ipsum dolor",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis sapien, tincidunt sed leo at, pretium fermentum",
+    "designation":"UI/UX Developer"
+  }
