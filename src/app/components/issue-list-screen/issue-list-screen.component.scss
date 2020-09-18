@@ -262,8 +262,19 @@ input[type=text] {
   }
 
   .toggle{
+   display:flex;
    padding-top:1rem;
+   padding-left:1rem;
    margin-right:1rem;
+   // border:1px solid black;
+   justify-content:space-between;
+  }
+
+  .count{
+   //   border:1px solid red;
+     margin-right:1rem;
+     font-size: 2rem;
+     padding-top:0.5rem;
   }
 
   .en{

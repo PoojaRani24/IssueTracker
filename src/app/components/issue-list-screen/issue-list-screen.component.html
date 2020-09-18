@@ -33,7 +33,7 @@
               <!-- <mat-icon style="color: #5763FE;">crop_rotate</mat-icon> -->
               <div class="left">
                 <a href="#"  class="brand"><b>{{ 'tracker' | translate }}</b></a>
-                <input type="text" placeholder="{{ 'search' | translate }}">
+                <input #box (keyup.enter)="onEnter(box.value)" type="text" placeholder="{{ 'search' | translate }}">
               </div>
               <div class="right" >
                 <a class="notif" href="#"><mat-icon >notification_important</mat-icon></a>
@@ -50,9 +50,8 @@
           <div class="heading part2">
             <div class="toggle">
               <!-- <mat-slide-toggle></mat-slide-toggle> -->
+              <div class="count">{{ this.count$ | async }}</div>
               <button mat-raised-button  class="en mat-btn" (click)="changeLanguage()">en | de</button>
-              
-
             </div>
               <div>
                 <app-dropdown></app-dropdown>

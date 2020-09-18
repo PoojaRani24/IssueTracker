@@ -19,6 +19,9 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './toggle.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +49,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
+    }),
+    StoreModule.forRoot({
+      count: counterReducer
     })
   ],
   providers: [],
