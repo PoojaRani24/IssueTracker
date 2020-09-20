@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import {select, Store} from '@ngrx/store'; 
-import { Issue } from '../../issue'; 
-import {Observable} from 'rxjs'; 
-import { IssueAdd,IssueRemove } from '../../issue.actions'; 
+import { Store } from '@ngrx/store';
+import { Issue } from '../../issue';
+import { IssueAdd, IssueRemove } from '../../issue.actions';
 import { groupBy } from 'lodash';
 
 @Component({
@@ -12,7 +11,7 @@ import { groupBy } from 'lodash';
 })
 export class IssueAddComponent {
 
-  issues:Array<Issue>; 
+  issues: Array<Issue>;
 
   id: string;
   date: string;
@@ -27,37 +26,33 @@ export class IssueAddComponent {
   InProgress ;
   Done;
 
-  constructor(private store: Store<{ issues: Issue[] }>) { 
-    this.store.select('issues').subscribe((state => this.issues = state)); 
-    console.log(this.issues);
-  } 
-  AddIssue() { 
-    console.log("Add method is called")
-    const issue = new Issue(); 
-    issue.id = this.id; 
-    issue.date = this.date; 
-    issue.title = this.title; 
-    issue.description = this.description; 
-    issue.name = this.name; 
-    issue.designation = this.designation; 
-    issue.status = this.status; 
-    console.log(issue.name)
-    this.store.dispatch(new IssueAdd(issue)); 
-    console.log("Add method ends")
-    console.log(this.issues);
-    console.log(this.issues.length)
+  constructor(private store: Store<{ issues: Issue[] }>) {
+    this.store.select('issues').subscribe((state => this.issues = state));
+  }
+  AddIssue(): void {
+    const issue = new Issue();
+    issue.id = this.id;
+    issue.date = this.date;
+    issue.title = this.title;
+    issue.description = this.description;
+    issue.name = this.name;
+    issue.designation = this.designation;
+    issue.status = this.status;
+    this.store.dispatch(new IssueAdd(issue));
+    this.categorise();
+  }
+  removeIssue(issueIndex: any): void {
+     this.store.dispatch(new IssueRemove(issueIndex));
+     this.categorise();
+  }
+
+  categorise(): void{
     this.IssueByStatus = groupBy(this.issues, 'status');
-    console.log(this.IssueByStatus)
     this.HighPriority = this.IssueByStatus['High Priority'];
     this.InProgress = this.IssueByStatus['In-Progress'];
     this.Done = this.IssueByStatus.Done;
-    // console.log(this.HighPriority)
-    // console.log(this.InProgress)
-    // console.log(this.Done)
-
-  } 
-  removeIssue(issueIndex) {
-    this.store.dispatch(new IssueRemove(issueIndex));
   }
+
+
 
 }

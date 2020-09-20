@@ -1,17 +1,12 @@
 import {ActionEx, IssueActionTypes} from './issue.actions';
 export const initialState = [];
-export function IssueReducer(state = initialState, action: ActionEx) {
+export function IssueReducer(state = initialState, action: ActionEx): Array<any> {
   switch (action.type) {
     case IssueActionTypes.Add:
-      //   console.log([...state]);
-      //  console.log(action.payload);
-      //  console.log([...state,action.payload]);
-      return [...state, action.payload]
-    case IssueActionTypes.Remove:{
-      return [
-        ...state.slice(0, action.payload),
-        ...state.slice(action.payload + 1)
-      ];}
+      return [...state, action.payload];
+    case IssueActionTypes.Remove: {
+      const issueId = action.payload;
+      return state.filter((el) => el.id !== issueId); }
     default:
       return state;
   }

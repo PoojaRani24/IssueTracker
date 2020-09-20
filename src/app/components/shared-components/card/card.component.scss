@@ -42,13 +42,14 @@
   .date{
     display:flex;
     justify-content: space-between;
-    // border:1px solid red;
   }
 
   .remove {
     border:none;
     outline:none;
-  }
+    transform: translate(14px, -14px);
+    background:$white; 
+   }
   
 
   

@@ -33,7 +33,7 @@
         <!-- <mat-icon style="color: #5763FE;">crop_rotate</mat-icon> -->
         <div class="left">
           <a href="#" class="brand"><b>{{ 'tracker' | translate }}</b></a>
-          <input #box (keyup.enter)="onEnter(box.value)" type="text" placeholder="{{ 'search' | translate }}">
+          <input type="text" placeholder="{{ 'search' | translate }}">
         </div>
         <div class="right">
           <a class="notif" href="#">
@@ -70,44 +70,9 @@
           </div>
         </div>
       </div>
-
       <app-issue-add></app-issue-add>
-
-      <!-- <div class="row main-part-1">
-        <div class="col-3 todo">
-          <h1 class="title">{{ 'todo' | translate }} {{ this.IssueByStatus["High Priority"].length }}</h1>
-          <div *ngFor="let issue of this.HighPriority">
-            <app-card [issue]="issue"></app-card>
-          </div>
-        </div>
-        <div class="col-3 progress">
-          <h1 class="title">{{ 'in-progress' | translate }} {{ this.IssueByStatus["In-Progress"].length }}</h1>
-          <div *ngFor="let issue of this.InProgress">
-            <app-card [issue]="issue"></app-card>
-          </div>
-        </div>
-        <div class="col-3 done">
-          <h1 class="title">{{ 'done' | translate }} {{ this.IssueByStatus["Done"].length }}</h1>
-          <div *ngFor="let issue of this.Done">
-            <app-card [issue]="issue"></app-card>
-          </div>
-        </div>
-      </div> -->
     </main>
   </div>
 </div>
 
 
-<!-- <h4>List of Issues</h4>
-<ul class="issues">
-  <li *ngFor="let issue of newissues ; let i=index">
-    <span>{{i+1}}.</span>
-    {{issue.id}}
-    {{issue.date}}
-    {{issue.title}}
-    {{issue.description}}
-    {{issue.name}}
-    {{issue.designation}}
-    {{issue.status}}
-  </li>
-</ul> -->

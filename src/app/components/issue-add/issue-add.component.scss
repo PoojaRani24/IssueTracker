@@ -1,44 +1,19 @@
 @import '../../../assets/utilities/_variable.scss';
 
-.issues { 
-    margin: 0 0 2em 0; 
-    list-style-type: none; 
-    padding: 0; 
-    width: 15em; 
-  } 
-  .issues li { 
-    background-color: steelblue; 
-    color: white; 
-    border-radius: 4px; 
-    padding: 4px; 
-    margin: 2px; 
-    border:2px solid red;
-  }
-
-
-  // div {
-  //   border-radius: 5px;
-  //   background-color:#f2f2f2;
-  //   padding: 20px;
-  //   // margin:10%;
-  //    margin-left:20%;
-  //    margin-right:40%;
-  // }
-
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid $input-border;
     border-radius: 4px;
     box-sizing: border-box;
   }
   
   input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: $submit-btn;
+    color:$white;
     padding: 14px 20px;
     margin: 8px 0px;
     border: none;
@@ -47,7 +22,7 @@ input[type=text], select {
   }
 
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color:$submit-btn-hover;
   }
 
  .addIssue{

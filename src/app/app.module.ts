@@ -22,7 +22,6 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { IssueReducer } from './issue.reducer';
 import { counterReducer } from './toggle.reducer';
-import { IssueViewComponent } from './components/issue-view/issue-view.component';
 import { IssueAddComponent } from './components/issue-add/issue-add.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { IssueAddComponent } from './components/issue-add/issue-add.component';
     CardComponent,
     DropdownComponent,
     IssueListScreenComponent,
-    IssueViewComponent,
     IssueAddComponent
   ],
   imports: [
