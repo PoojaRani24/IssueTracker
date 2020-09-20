@@ -8,37 +8,48 @@ import { change } from '../../toggle.actions';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { async } from 'rxjs/internal/scheduler/async';
+import { Issue } from '../../issue'
 
 @Component({
   selector: 'app-issue-list-screen',
   templateUrl: './issue-list-screen.component.html',
   styleUrls: ['./issue-list-screen.component.scss']
 })
-export class IssueListScreenComponent implements OnInit {
+export class IssueListScreenComponent  {
   count$: Observable<number>
-  name$: Observable<string>
+ 
   Todo = 'High Priority';
   Progress = 'In-Progress';
   done = 'Done';
-  value='';
+  
   issues: any = (data as any).default;
-
+  newissues: Array<Issue>; 
   IssueByStatus;
   HighPriority;
   InProgress;
   Done;
   lan;
 
-  constructor(private translate: TranslateService,private store: Store<{ count: number , name:string }>) {
+  constructor(private translate: TranslateService,private store: Store<{ count: number , issues: Issue[] }>) {
     translate.addLangs(['en', 'nl']);
     translate.setDefaultLang('en');
     this.count$ = store.pipe(select('count'));
-    this.name$ = store.pipe(select('name'));
+    this.store.select('issues').subscribe((state => this.newissues = state))
+    //  this.newissues = store.pipe(select('issues')); 
+     console.log(this.newissues);
+    console.log(this.count$);
+    // this.IssueByStatus = groupBy(this.newissues, 'status');
+    // console.log(this.IssueByStatus)
+    // this.name$ = store.pipe(select('name'));
   }
 
-  ngOnInit(): void {
+  ngOnChange(): void {
     this.lan = 'en';
-    this.IssueByStatus = groupBy(this.issues, 'status');
+    this.store.select('issues').subscribe((state => this.newissues = state))
+    //  this.newissues = store.pipe(select('issues')); 
+     console.log(this.newissues);
+    this.IssueByStatus = groupBy(this.newissues, 'status');
+    console.log(this.IssueByStatus)
     this.HighPriority = this.IssueByStatus['High Priority'];
     this.InProgress = this.IssueByStatus['In-Progress'];
     this.Done = this.IssueByStatus.Done;

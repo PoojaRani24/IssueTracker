@@ -1,0 +1,51 @@
+
+<h1 class="addIssue">Add New Issue </h1>
+<!-- <input #box ><button (click)="AddIssue(box.value)">Add</button> -->
+<div>
+  <input [(ngModel)]="id" type="text" placeholder="ID">
+  <input [(ngModel)]="date" type="text" placeholder="Date">
+  <input [(ngModel)]="title" type="text" placeholder="Title">
+  <input [(ngModel)]="description" type="text" placeholder="Description">
+  <input [(ngModel)]="name" type="text" placeholder="Name">
+  <input [(ngModel)]="designation" type="text" placeholder="Designation">
+  <input [(ngModel)]="status" type="text" placeholder="Status">
+  <input  type="submit" value="Submit" (click)="AddIssue()">
+</div>
+
+
+
+<!-- <h4>List of Issues</h4> -->
+<!-- <ul class="issues">
+  <li *ngFor="let issue of issues; let i=index">
+    <span >{{i+1}}.</span> 
+    {{issue.id}}
+    {{issue.date}}
+    {{issue.title}}
+    {{issue.description}}
+     {{issue.name}}
+     {{issue.designation}}
+     {{issue.status}}
+    <button style="float: right" (click)="removeIssue(i)">Remove</button>
+  </li>
+</ul> -->
+
+<div class="row main-part-1">
+        <div class="col-3 todo">
+          <h1 class="title">{{ 'todo' | translate }} {{ this.IssueByStatus["High Priority"]?this.IssueByStatus["High Priority"].length:0 }}</h1>
+          <div *ngFor="let issue of this.HighPriority">
+            <app-card [issue]="issue"></app-card>
+          </div>
+        </div>
+        <div class="col-3 progress">
+          <h1 class="title">{{ 'in-progress' | translate }} {{ this.IssueByStatus["In-Progress"]?this.IssueByStatus["In-Progress"].length:0 }}</h1>
+          <div *ngFor="let issue of this.InProgress">
+            <app-card [issue]="issue"></app-card>
+          </div>
+        </div>
+        <div class="col-3 done">
+          <h1 class="title">{{ 'done' | translate }} {{ this.IssueByStatus["Done"]?this.IssueByStatus["Done"].length:0 }}</h1>
+          <div *ngFor="let issue of this.Done">
+            <app-card [issue]="issue"></app-card>
+          </div>
+        </div>
+      </div>

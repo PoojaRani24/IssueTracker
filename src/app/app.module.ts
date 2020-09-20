@@ -20,14 +20,19 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
+import { IssueReducer } from './issue.reducer';
 import { counterReducer } from './toggle.reducer';
+import { IssueViewComponent } from './components/issue-view/issue-view.component';
+import { IssueAddComponent } from './components/issue-add/issue-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     DropdownComponent,
-    IssueListScreenComponent
+    IssueListScreenComponent,
+    IssueViewComponent,
+    IssueAddComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,8 @@ import { counterReducer } from './toggle.reducer';
         }
     }),
     StoreModule.forRoot({
-      count: counterReducer
+      count: counterReducer,
+      issues: IssueReducer
     })
   ],
   providers: [],

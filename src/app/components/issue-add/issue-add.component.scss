@@ -1,0 +1,79 @@
+@import '../../../assets/utilities/_variable.scss';
+
+.issues { 
+    margin: 0 0 2em 0; 
+    list-style-type: none; 
+    padding: 0; 
+    width: 15em; 
+  } 
+  .issues li { 
+    background-color: steelblue; 
+    color: white; 
+    border-radius: 4px; 
+    padding: 4px; 
+    margin: 2px; 
+    border:2px solid red;
+  }
+
+
+  // div {
+  //   border-radius: 5px;
+  //   background-color:#f2f2f2;
+  //   padding: 20px;
+  //   // margin:10%;
+  //    margin-left:20%;
+  //    margin-right:40%;
+  // }
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+ .addIssue{
+  margin: 8px 0;
+ }
+
+ .main-part-1{
+  display:flex;
+  justify-content:space-evenly;
+  margin:20px;
+  height:100vh;
+}  
+
+.todo,.progress, .done{
+  background-color: $issue-status-bg;
+}
+
+.title{ 
+ padding-top:15px;
+ padding-left:30px;
+}
+
+.heading{
+  display:flex;
+  justify-content:space-between;
+  padding:3px;
+}
+  
+  

@@ -1,14 +1,17 @@
 <mat-card class="example-card font">
                 
     <div class="row card">
-        <div><b>{{ issue.id | translate}}</b></div>
-        <div>{{ 'date' | translate}}</div>
+        <div><b>{{ issue.id }}</b></div>
+        <div class="row date">
+        <div>{{ issue.date }}</div>
+        <button class="remove" (click)="del(issue.id)"><mat-icon  class="remove">cancel</mat-icon></button>
+      </div>
     </div>
-    <div class="row" ><h1><b>{{ 'title' | translate }}</b></h1></div>
+    <div class="row" ><h1><b>{{ issue.title }}</b></h1></div>
     
     <mat-card-content>
       <p>
-        {{ 'description' | translate}}
+        {{ issue.description }}
       </p>
     </mat-card-content>
     <mat-card-actions>
@@ -21,7 +24,7 @@
             <a><img src="assets/dog.jpeg"  class="avatar"></a>
             <div>
             <div class= "name" ><b>{{ issue.name | translate}}</b></div>
-            <div class="designation">{{ 'designation' | translate}}</div>
+            <div class="designation">{{ issue.designation | translate}}</div>
           </div>
           </div>
 
